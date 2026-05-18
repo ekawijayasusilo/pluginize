@@ -1,0 +1,29 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "pluginize",
+  "description": "Personal marketplace of Claude Code plugins built and curated by Eka Wijaya Susilo.",
+  "owner": {
+    "name": "Eka Wijaya Susilo",
+    "email": "ekawijayasusilo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "linkedin-toolkit",
+      "description": "Skills for auditing and rewriting LinkedIn profiles end-to-end using 2026 best practices.",
+      "author": {
+        "name": "Eka Wijaya Susilo"
+      },
+      "category": "productivity",
+      "source": "./plugins/linkedin-toolkit"
+    },
+    {
+      "name": "writing-toolkit",
+      "description": "Skills for writing prose that sounds natural — stripping AI tells, clichés, and over-formal patterns.",
+      "author": {
+        "name": "Eka Wijaya Susilo"
+      },
+      "category": "writing",
+      "source": "./plugins/writing-toolkit"
+    }
+  ]
+}

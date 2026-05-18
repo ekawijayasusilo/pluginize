@@ -1,0 +1,11 @@
+{
+  "name": "linkedin-toolkit",
+  "version": "0.1.0",
+  "description": "Skills that audit and rewrite LinkedIn profiles end-to-end against 2026 best practices.",
+  "author": {
+    "name": "Eka Wijaya Susilo",
+    "email": "ekawijayasusilo@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["linkedin", "profile", "career", "personal-branding", "content"]
+}
