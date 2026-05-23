@@ -79,4 +79,17 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. Plan Execution Notes
+
+**Applies only when:** Making changes based on a specific plan file (e.g., a file under `~/.claude/plans/` or any plan path I pointed you at). **Skip entirely for regular prompts without a source plan** — do not create this file for ad-hoc requests.
+
+As you execute the plan, maintain a running `implementation-notes.html` file in `temp-docs/` (project-relative). Capture anything I'd want to know about how the implementation diverged from or interpreted the plan:
+
+- **Design decisions** — Choices you made where the plan was ambiguous.
+- **Deviations** — Places you intentionally departed from the plan, and why.
+- **Tradeoffs** — Alternatives you considered and why you picked the chosen one.
+- **Open questions** — Things that proceeded fine but you want me to confirm or revise after the fact.
+
+Update the file at each meaningful decision point, not only at the end. For *blocking* ambiguity (can't proceed without an answer), Section #1 still applies — stop and ask.
+
 ---
