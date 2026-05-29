@@ -111,6 +111,46 @@ When to use: essays, blog posts, opinion pieces, narrative non-fiction. Generall
 
 Common mistake: writing a lead that is really an abstract or BLUF. An essay lead invites the reader in; a memo BLUF tells them the answer immediately. Different goals, different forms.
 
+## Technical documentation modes (Diataxis)
+
+The patterns above (BLUF, inverted pyramid, PREP, SCQA, lead/body/close) are for prose. Technical documentation has its own information architecture, and the most useful framework is [Diataxis](https://diataxis.fr/) — four distinct modes, each serving a different reader need.
+
+The framework matters because most bad technical documentation mixes modes. An API reference turns into a tutorial. A tutorial behaves like a reference manual. Pick the mode first; structure follows.
+
+### The four modes
+
+- **Tutorial** — teaches a beginner by walking through a complete learning path. Optimised for *progress and confidence*. Prerequisites, a realistic path, a finished outcome, "what to do next."
+- **How-to guide** — helps a reader complete a specific task they already understand the need for. Optimised for *direct steps*. Task in the title, prerequisites, numbered steps, verification.
+- **Reference** — lets the reader look up exact facts. Optimised for *completeness, consistency, and scanning*. Same shape per entry. Required vs optional parameters. Defaults, return values, error cases. No long conceptual explanations — link out instead.
+- **Explanation** — helps the reader understand a concept, tradeoff, or system. Optimised for *mental models*. Start with the question the explanation answers. Define concepts before using them. Use examples and comparisons. Explain tradeoffs and reasons.
+
+A README usually combines modes — that is fine — but each section inside it should still know which job it is doing.
+
+### Picking the mode by reader question
+
+| Reader's question | Mode |
+|---|---|
+| "How do I learn this from scratch?" | Tutorial |
+| "How do I do this specific thing?" | How-to |
+| "What are the exact details / parameters / fields?" | Reference |
+| "Why does it work this way?" | Explanation |
+
+When in doubt: ask what the reader will do with the page. Read it once and never return → tutorial or explanation. Return to look something up → reference. Follow it step-by-step now → how-to.
+
+### README shape
+
+A README is usually a compact mix. A flexible default order:
+
+1. What this is (one or two sentences).
+2. Who it is for (when not obvious).
+3. Quick start (install, minimal usage).
+4. Common usage (the 80% case).
+5. Configuration / integration notes.
+6. Troubleshooting.
+7. Links to deeper docs (tutorial, how-to, reference, explanation).
+
+A tiny library does not need every section. A large platform may need each of these to link out to a full page.
+
 ## Cross-cutting structural choices
 
 A few decisions that apply to any pattern above.
@@ -150,7 +190,7 @@ Quick guide:
 - Persuasive paragraph or argument within a larger doc → **PREP**
 - Analysis or strategy doc that needs to set up *why* the question matters → **SCQA**
 - Essay, blog post, narrative non-fiction → **Lead / body / close**
-- Technical documentation (README, API doc, tutorial) → none of the above as a whole-doc pattern; use task-oriented structure (what it is, how to install, how to use, troubleshooting) and rely on headings and lists for navigation.
+- Technical documentation → pick a **Diataxis mode** first (tutorial / how-to / reference / explanation), then structure within that. READMEs use a compact mix; see the README shape section above.
 
 For audience-driven choices between patterns, see `audience-awareness`.
 

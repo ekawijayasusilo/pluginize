@@ -80,9 +80,26 @@ Active voice is the right default, but passive voice is correct (not a flaw) whe
 
 - The agent is unknown, irrelevant, or obvious ("The window was broken." "The bill was passed in 1972.")
 - The patient deserves emphasis ("The vaccine was administered to 200 children.")
+- The state matters more than the actor — common in technical writing ("The cache is invalidated after 10 minutes." Rewriting to "The system invalidates the cache after 10 minutes" names a vague actor and adds no information.)
 - Conventional in the genre (scientific writing, formal reports, some legal prose)
 
-Strunk himself has been criticized — notably by Geoffrey Pullum — for mislabeling non-passive constructions as passive in his examples. When applying Rule 10, verify the sentence is actually passive before "fixing" it.
+Strunk himself has been criticised — notably by Geoffrey Pullum — for mislabelling non-passive constructions as passive in his examples. When applying Rule 10, verify the sentence is actually passive before "fixing" it.
+
+### Rule 6 — Do not break sentences in two
+
+Avoid *accidental* fragments that confuse grammar or obscure meaning. Deliberate fragments are effective in technical writing ("Returns null if not found." "No configuration required."), UI text and microcopy, dialogue, headings, and personal essays where rhythm matters. Do not "fix" a fragment that is clearly intentional and improves scanability or rhythm.
+
+### Rule 9 — Begin paragraphs with topic sentences
+
+Topic sentences are a useful default in expository, technical, academic, and business writing. They are not mandatory in narrative, essay, dialogue, product copy, or short UI text. In technical documentation, a heading plus a direct first sentence often does the topic-sentence job already — adding a separate topic sentence on top can feel redundant.
+
+### Rule 11 — Put statements in positive form
+
+Positive form is usually clearer, but negative form is correct when contrast is the point, when warning about prohibited behaviour, when defining a boundary, or when preventing a likely mistake. Do not rewrite a precise warning into a positive sentence that softens or hides the risk. "Do not commit secrets to the repo" is sharper and clearer than "Keep secrets out of the repo."
+
+### Rule 18 — Place emphatic words at the end of the sentence
+
+End emphasis is useful for rhetorical force in essay and persuasive writing. Technical writing often prefers the opposite — put the key term first so the reader can scan. "**Postgres** is the primary datastore" lets a reader skim and locate; "The primary datastore is **Postgres**" is more rhetorical but harder to scan in a list of similar sentences. Prefer scanability over rhetorical force in reference docs, procedures, and tables.
 
 ## Related skills
 

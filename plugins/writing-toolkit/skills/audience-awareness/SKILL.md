@@ -92,6 +92,20 @@ These are mismatches the model tends to make. Watch for them.
 - **Treating internal docs like external docs.** Less hand-holding, more shared context. You can assume your colleagues know what the team's services are called.
 - **Defaulting to "general literary prose."** No real audience defaults to that. Always pick a category before applying rules.
 
+## Accessibility checklist
+
+Before finalising any prose that other people will read — documentation, READMEs, RFCs, release notes, support pages — run this checklist. These are writing-level accessibility concerns, not visual-design concerns. They matter regardless of audience type.
+
+- **Link text describes the destination.** Avoid "click here," "read more," and bare URLs. The link text should make sense when read aloud by itself or scanned in a list of links. *"See the [authentication guide](...)"* beats *"For authentication info, [click here](...)."*
+- **Headings form a logical outline.** Heading levels nest correctly (H2 inside H1, H3 inside H2). Do not skip levels for visual effect. A reader using a screen reader navigates by heading structure.
+- **Acronyms expanded on first use.** Unless the audience certainly knows the term, write "Single Sign-On (SSO)" the first time, then "SSO" thereafter. Especially important for cross-team docs where shared context cannot be assumed.
+- **Instructions do not depend on visual cues.** "Click the green button on the right" fails for readers who cannot see colour or layout. Name the button instead: "Click **Save changes**." Same rule for "as shown above," "in the diagram below," etc. — the prose should stand alone or name the referenced element explicitly.
+- **Lists serve parallel items, prose serves relationships.** A list of three things with natural connectives ("first… because… therefore") flattens the relationship. Conversely, six parallel parameters as a paragraph forces the reader to parse them out. Use the shape that matches the content.
+- **Error messages tell the reader what to do next.** Not "Authentication failed" — "Authentication failed. Verify your API key, then retry. If the problem persists, see [troubleshooting](...)." This applies to any prose that surfaces a failure mode.
+- **Plain language when it preserves precision.** Prefer common words when they say the same thing. "Use" beats "utilise." "Help" beats "facilitate." This is not a rule against technical terms — it is a rule against unnecessary uncommon words.
+
+This checklist is short and writing-focused on purpose. UI-level accessibility (colour contrast, focus indicators, ARIA, keyboard navigation) belongs in a UI accessibility skill, not here.
+
 ## Related skills
 
 For the rules this skill points at:

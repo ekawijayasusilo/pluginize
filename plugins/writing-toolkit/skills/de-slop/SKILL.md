@@ -14,9 +14,30 @@ When given text to de-slop:
 1. Identify AI patterns from the catalogue below.
 2. Rewrite problematic sections in place.
 3. Preserve meaning. Match the intended tone (formal, technical, casual).
-4. Do not "improve" beyond removing slop — this skill is for cleanup, not voice injection.
-5. Run the self-audit checklist at the end before declaring done.
-6. Run a final adversarial pass: ask yourself "what about this still reads as AI-generated?" Note remaining tells. Revise.
+4. **Do not invent specificity** to fill the gap left by removed puffery. See the Factual safety rule below.
+5. Do not "improve" beyond removing slop — this skill is for cleanup, not voice injection.
+6. Run the self-audit checklist at the end before declaring done.
+7. Run a final adversarial pass: ask yourself "what about this still reads as AI-generated?" Note remaining tells. Revise.
+
+## Factual safety rule
+
+This is the most important rule in this skill. Read it before applying any other pattern.
+
+Removing AI puffery often leaves a gap. The temptation is to fill the gap with concrete details — dates, named organisations, specific numbers, causal explanations. **Do not do this unless those details are present in the source text, the user's supplied context, cited sources, or files you have been asked to inspect.** Concrete language is not a license to add new facts.
+
+A clear sentence with unsupported details is worse than a vague sentence. At least the vague sentence does not lie.
+
+When the source does not support a concrete claim, you have three valid options:
+
+1. **Remove** the unsupported claim entirely.
+2. **Narrow** the claim to what the source actually supports.
+3. **Mark** the gap with `[citation needed]` or `[verify: ...]` so the writer can fill it in.
+
+The examples in this skill show what good rewrites look like *assuming the writer has the relevant facts*. If you apply this skill without source material, prefer the conservative path (remove or narrow). Do not invent.
+
+A useful self-check after rewriting: scan the rewrite for any new date, number, named organisation, named tool, location detail, causal explanation, or superlative. For each one, ask: was it in the source? If not, remove or mark it.
+
+This skill is for clarity and reader trust. It is not a tool for evading AI detectors. Do not make edits that reduce accuracy, attribution, or transparency just to make text appear less AI-generated.
 
 ## When to use this skill
 
@@ -71,7 +92,7 @@ LLMs drift toward "cultural heritage" rhetoric even in neutral contexts. Keep to
 
 Before: *Nestled within the breathtaking region of Gonder in Ethiopia, Alamata Raya Kobo stands as a vibrant town with a rich cultural heritage and stunning natural beauty.*
 
-After: *Alamata Raya Kobo is a town in the Gonder region of Ethiopia, known for its weekly market and 18th-century church.*
+After (with source material that mentions a market and a church): *Alamata Raya Kobo is a town in the Gonder region of Ethiopia, known for its weekly market and 18th-century church.*
 
 ### 4. Vague attributions and weasel words
 
@@ -81,7 +102,7 @@ Attribute opinions to specific people or sources, or do not attribute them at al
 
 Before: *Due to its unique characteristics, the Haolai River is of interest to researchers and conservationists. Experts believe it plays a crucial role in the regional ecosystem.*
 
-After: *The Haolai River supports several endemic fish species, according to a 2019 survey by the Chinese Academy of Sciences.*
+After (assuming source material like *"2019 Chinese Academy of Sciences survey: 7 endemic fish species"*): *The Haolai River supports several endemic fish species, according to a 2019 survey by the Chinese Academy of Sciences.*
 
 ### 5. Outline-like "Challenges and Future Prospects" sections
 
@@ -91,7 +112,11 @@ Many LLM-generated articles end with a formulaic "Challenges" or "Future" sectio
 
 Before: *Despite its industrial prosperity, Korattur faces challenges typical of urban areas, including traffic congestion and water scarcity. Despite these challenges, with its strategic location and ongoing initiatives, Korattur continues to thrive as an integral part of Chennai's growth.*
 
-After: *Traffic congestion increased after 2015 when three new IT parks opened. The municipal corporation began a stormwater drainage project in 2022 to address recurring floods.*
+After (no additional source material): *Traffic congestion and water scarcity are recurring problems in Korattur.*
+
+After (with source material giving dates and projects): *Traffic congestion increased after 2015 when three new IT parks opened. The municipal corporation began a stormwater drainage project in 2022 to address recurring floods.*
+
+The "challenges" formula needs to be cut either way — but the dates and named projects must come from the source, not from the rewrite.
 
 ### 6. Generic positive conclusions
 
@@ -362,10 +387,11 @@ After:
 1. Read the input text.
 2. Identify all instances of the patterns above.
 3. Rewrite each problematic section. Preserve meaning. Match the document's tone.
-4. Run the self-audit checklist below.
-5. Ask: "What about this still reads as obviously AI-generated?" Note remaining tells in a sentence or two.
-6. Revise once more to remove those.
-7. Return: final rewrite + (optional) a brief summary of changes.
+4. **Run the factual-safety pass.** For every newly concrete claim in the rewrite (any date, number, named organisation, named tool, location detail, causal explanation, or superlative), verify it was in the source. Remove, narrow, or mark anything invented.
+5. Run the self-audit checklist below.
+6. Ask: "What about this still reads as obviously AI-generated?" Note remaining tells in a sentence or two.
+7. Revise once more to remove those.
+8. Return: final rewrite + (optional) a brief summary of changes.
 
 ## Plain-language self-audit checklist
 
@@ -391,6 +417,10 @@ Before declaring the rewrite done, audit it on the metrics below. These are the 
 **Paragraph length**
 
 - All paragraphs roughly the same length signals AI patterning. Real writing has paragraphs of varied length depending on what each one is doing.
+
+**Factual safety**
+
+- Scan the rewrite for new dates, numbers, named organisations, named tools, locations, or causal claims that were not in the source. For each one, ask: did this come from the source? If not, remove it, narrow it, or mark it with `[verify: ...]`. A clean-sounding rewrite that invents specificity is a worse output than a slightly vague one.
 
 ### Limitations of this checklist
 
