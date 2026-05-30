@@ -63,15 +63,3 @@ When working on a document scaffolded by this skill:
 - `de-slop` — strip AI patterns from any draft prose.
 - `audience-awareness` — RFCs and ADRs have specific readers (your team, future maintainers); apply rules accordingly.
 
-## Future templates
-
-Currently bundled: RFC, ADR.
-
-The most likely additions over time:
-
-- Postmortem (incident report)
-- Design doc (Google/Meta-style detailed system design)
-- Runbook (operational procedure)
-- Deprecation notice (removing a feature with a migration path)
-
-These are not included yet. Add a new file under `templates/` and a row in the table above when scope grows.

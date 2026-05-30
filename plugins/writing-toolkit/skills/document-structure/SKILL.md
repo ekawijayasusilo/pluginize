@@ -113,7 +113,7 @@ Common mistake: writing a lead that is really an abstract or BLUF. An essay lead
 
 ## Technical documentation modes (Diataxis)
 
-The patterns above (BLUF, inverted pyramid, PREP, SCQA, lead/body/close) are for prose. Technical documentation has its own information architecture, and the most useful framework is [Diataxis](https://diataxis.fr/) — four distinct modes, each serving a different reader need.
+The patterns above are for prose. Technical documentation has its own information architecture, and the most useful framework is [Diataxis](https://diataxis.fr/) — four distinct modes, each serving a different reader need.
 
 The framework matters because most bad technical documentation mixes modes. An API reference turns into a tutorial. A tutorial behaves like a reference manual. Pick the mode first; structure follows.
 

@@ -18,6 +18,7 @@ When given text to de-slop:
 5. Do not "improve" beyond removing slop — this skill is for cleanup, not voice injection.
 6. Run the self-audit checklist at the end before declaring done.
 7. Run a final adversarial pass: ask yourself "what about this still reads as AI-generated?" Note remaining tells. Revise.
+8. Return the final rewrite, optionally with a brief summary of changes.
 
 ## Factual safety rule
 
@@ -381,17 +382,6 @@ Before:
 After:
 
 > Feature flags let teams ship code without making it visible to users. The cost is operational: stale flags accumulate and the codebase ends up carrying many half-completed migrations. Teams that use flags well treat each one as having an expected lifetime and audit them on a schedule. LaunchDarkly, Flipper, and Unleash are common managed and self-hosted options.
-
-## The full process
-
-1. Read the input text.
-2. Identify all instances of the patterns above.
-3. Rewrite each problematic section. Preserve meaning. Match the document's tone.
-4. **Run the factual-safety pass.** For every newly concrete claim in the rewrite (any date, number, named organisation, named tool, location detail, causal explanation, or superlative), verify it was in the source. Remove, narrow, or mark anything invented.
-5. Run the self-audit checklist below.
-6. Ask: "What about this still reads as obviously AI-generated?" Note remaining tells in a sentence or two.
-7. Revise once more to remove those.
-8. Return: final rewrite + (optional) a brief summary of changes.
 
 ## Plain-language self-audit checklist
 

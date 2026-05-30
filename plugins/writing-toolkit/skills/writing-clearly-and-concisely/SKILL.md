@@ -108,7 +108,3 @@ For complementary guidance, also load:
 - `de-slop` — remove AI-writing patterns (use together with this skill when editing AI-generated prose)
 - `audience-awareness` — adapt rules to the reader and document type
 - `document-structure` — organize the document above the paragraph level
-
-## Bottom line
-
-Editing prose for clarity? Use the rule list above. For deeper questions on a specific rule or usage point, load `elements-of-style.md`. For complementary edits, layer in `de-slop` and `audience-awareness`.

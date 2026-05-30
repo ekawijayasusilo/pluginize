@@ -18,7 +18,7 @@
     },
     {
       "name": "writing-toolkit",
-      "description": "Skills for writing prose that sounds natural — stripping AI tells, clichés, and over-formal patterns.",
+      "description": "Skills for writing high-quality human-readable documents: sentence-level clarity, anti-AI-slop, audience awareness, document structure, and tech-doc templates (RFC, ADR).",
       "author": {
         "name": "Eka Wijaya Susilo"
       },
